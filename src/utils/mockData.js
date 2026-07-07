@@ -1,66 +1,66 @@
 export const MOCK_CSV_TEXT = `Date,Description,Debit,Credit,Amount
-2026-06-01,Salary / Direct Deposit,0,5000,5000
-2026-06-02,Swiggy Restaurant,15.50,0,-15.50
-2026-06-03,Uber Ride,24.00,0,-24.00
-2026-06-03,Netflix Subscription,14.99,0,-14.99
-2026-06-04,Amazon Web Services,85.20,0,-85.20
-2026-06-05,Whole Foods Market,120.50,0,-120.50
-2026-06-06,Landlord Rent Payment,1500.00,0,-1500.00
-2026-06-10,Starbucks Coffee,6.75,0,-6.75
-2026-06-12,Gym Membership,45.00,0,-45.00
-2026-06-15,Dividends Deposit,0,250,250
-2026-06-18,Swiggy Restaurant,32.40,0,-32.40
-2026-06-20,Uber Ride,18.50,0,-18.50
-2026-06-21,Spotify Premium,9.99,0,-9.99
-2026-06-22,ChatGPT Plus Subscription,20.00,0,-20.00
-2026-06-23,Adobe Creative Cloud,54.99,0,-54.99
-2026-06-24,Chevron Gas Station,45.00,0,-45.00
-2026-06-25,Transfer from Savings,0,1000,1000
-2026-06-26,Amazon.com Purchase,145.80,0,-145.80
-2026-06-28,Swiggy Restaurant,42.10,0,-42.10
-2026-06-29,Steam Games,29.99,0,-29.99
-2026-06-30,Electric Utility Bill,112.40,0,-112.40`;
+2026-06-01,Salary / Direct Deposit,0,150000,150000
+2026-06-02,Swiggy Restaurant,950,0,-950
+2026-06-03,Uber Ride,750,0,-750
+2026-06-03,Netflix Subscription,649,0,-649
+2026-06-04,Amazon Web Services,7100,0,-7100
+2026-06-05,Reliance Smart,9800,0,-9800
+2026-06-06,Landlord Rent Payment,45000,0,-45000
+2026-06-10,Starbucks Coffee,450,0,-450
+2026-06-12,Gym Membership,2500,0,-2500
+2026-06-15,Dividends Deposit,0,7500,7500
+2026-06-18,Swiggy Restaurant,1800,0,-1800
+2026-06-20,Uber Ride,600,0,-600
+2026-06-21,Spotify Premium,119,0,-119
+2026-06-22,ChatGPT Plus Subscription,1999,0,-1999
+2026-06-23,Adobe Creative Cloud,4630,0,-4630
+2026-06-24,Indian Oil Petrol Pump,3500,0,-3500
+2026-06-25,Transfer from Savings,0,30000,30000
+2026-06-26,Amazon.in Purchase,12000,0,-12000
+2026-06-28,Swiggy Restaurant,2500,0,-2500
+2026-06-29,Steam Games,2499,0,-2499
+2026-06-30,BESCOM Electricity Bill,5400,0,-5400`;
 
 export const MOCK_ANALYSIS_RESULT = {
   healthScore: 78,
-  summary: "Your financial profile shows solid stability due to high recurring income, yielding a net savings rate of 61%. However, non-essential spending is elevated: subscriptions consume $230.17/month, and frequent dining via Swiggy totals $89.80 across multiple micro-transactions. Restructuring SaaS tooling and curbing weekend food delivery could reclaim up to $185 monthly.",
+  summary: "Your financial profile shows solid stability due to high recurring income, yielding a net savings rate of 45%. However, non-essential spending is elevated: subscriptions consume ₹16,997/month, and frequent dining via Swiggy totals ₹5,250 across multiple micro-transactions. Restructuring SaaS tooling and curbing weekend food delivery could reclaim up to ₹8,500 monthly.",
   categories: [
-    { name: "Housing", amount: 1500.00, percentage: 61.5, color: "#6366f1", count: 1 },
-    { name: "Subscriptions & SaaS", amount: 230.17, percentage: 9.4, color: "#ec4899", count: 5 },
-    { name: "Shopping", amount: 145.80, percentage: 6.0, color: "#8b5cf6", count: 1 },
-    { name: "Groceries", amount: 120.50, percentage: 4.9, color: "#10b981", count: 1 },
-    { name: "Utilities", amount: 112.40, percentage: 4.6, color: "#3b82f6", count: 1 },
-    { name: "Dining & Drinks", amount: 96.75, percentage: 4.0, color: "#f59e0b", count: 4 },
-    { name: "Transportation", amount: 87.50, percentage: 3.6, color: "#14b8a6", count: 3 },
-    { name: "Fitness", amount: 45.00, percentage: 1.8, color: "#ef4444", count: 1 },
-    { name: "Entertainment", amount: 29.99, percentage: 1.2, color: "#a855f7", count: 1 }
+    { name: "Housing", amount: 45000.00, percentage: 44.0, color: "#6366f1", count: 1 },
+    { name: "Subscriptions & SaaS", amount: 14497.00, percentage: 14.2, color: "#ec4899", count: 5 },
+    { name: "Shopping", amount: 12000.00, percentage: 11.7, color: "#8b5cf6", count: 1 },
+    { name: "Groceries", amount: 9800.00, percentage: 9.6, color: "#10b981", count: 1 },
+    { name: "Utilities", amount: 5400.00, percentage: 5.3, color: "#3b82f6", count: 1 },
+    { name: "Dining & Drinks", amount: 5700.00, percentage: 5.6, color: "#f59e0b", count: 4 },
+    { name: "Transportation", amount: 4850.00, percentage: 4.7, color: "#14b8a6", count: 3 },
+    { name: "Fitness", amount: 2500.00, percentage: 2.4, color: "#ef4444", count: 1 },
+    { name: "Entertainment", amount: 2499.00, percentage: 2.5, color: "#a855f7", count: 1 }
   ],
   subscriptions: [
-    { name: "Netflix Subscription", amount: 14.99, frequency: "Monthly", type: "Entertainment", description: "Standard streaming package. Swap to ad-supported version or share plan." },
-    { name: "Spotify Premium", amount: 9.99, frequency: "Monthly", type: "Entertainment", description: "Audio streaming. Consider family plan tier or ad-based tier." },
-    { name: "ChatGPT Plus Subscription", amount: 20.00, frequency: "Monthly", type: "Productivity", description: "AI tool. Audit if developer API is cheaper or free tier suffices." },
-    { name: "Adobe Creative Cloud", amount: 54.99, frequency: "Monthly", type: "Productivity", description: "Design suite. If inactive, negotiate a cheaper retention plan or pause." },
-    { name: "Amazon Web Services", amount: 85.20, frequency: "Monthly", type: "Infrastructure", description: "Development server. Stop idle EC2 instances or switch to free tiers." },
-    { name: "Gym Membership", amount: 45.00, frequency: "Monthly", type: "Fitness", description: "Local gym contract. Verify usage frequency is at least twice a week." }
+    { name: "Netflix Subscription", amount: 649.00, frequency: "Monthly", type: "Entertainment", description: "Standard premium streaming package. Swap to mobile-only version or share plan." },
+    { name: "Spotify Premium", amount: 119.00, frequency: "Monthly", type: "Entertainment", description: "Audio streaming. Consider family plan tier or ad-based tier." },
+    { name: "ChatGPT Plus Subscription", amount: 1999.00, frequency: "Monthly", type: "Productivity", description: "AI tool. Audit if developer API is cheaper or free tier suffices." },
+    { name: "Adobe Creative Cloud", amount: 4630.00, frequency: "Monthly", type: "Productivity", description: "Design suite. If inactive, negotiate a cheaper retention plan or pause." },
+    { name: "Amazon Web Services", amount: 7100.00, frequency: "Monthly", type: "Infrastructure", description: "Development server. Stop idle EC2 instances or switch to free tiers." },
+    { name: "Gym Membership", amount: 2500.00, frequency: "Monthly", type: "Fitness", description: "Local gym contract. Verify usage frequency is at least twice a week." }
   ],
   recommendations: [
-    { category: "Subscriptions", priority: "High", title: "Consolidate Entertainment SaaS", amount: 24.98, action: "Cancel Spotify Premium or Netflix for a month, switching to rotation style." },
-    { category: "Utilities", priority: "Medium", title: "Implement Smart Thermostat", amount: 25.00, action: "Optimize climate schedules. Reduces monthly heating/cooling costs by ~15%." },
-    { category: "Dining", priority: "Medium", title: "Meal Prep & Delivery Cap", amount: 40.00, action: "Cap Swiggy orders to twice per month. Learn 3 simple 15-minute recipes." },
-    { category: "SaaS Tools", priority: "Low", title: "Negotiate Adobe Rate", amount: 15.00, action: "Attempt cancellation screen to trigger promotional discount of 20-30%." }
+    { category: "Subscriptions", priority: "High", title: "Consolidate Entertainment SaaS", amount: 768.00, action: "Cancel Spotify Premium or Netflix for a month, switching to rotation style." },
+    { category: "Utilities", priority: "Medium", title: "Optimize Power Usage", amount: 1500.00, action: "Set AC to 24°C and optimize geyser timings. Reduces monthly power costs by ~15%." },
+    { category: "Dining", priority: "Medium", title: "Meal Prep & Delivery Cap", amount: 3500.00, action: "Cap Swiggy orders to twice per month. Learn 3 simple 15-minute home recipes." },
+    { category: "SaaS Tools", priority: "Low", title: "Negotiate Adobe Rate", amount: 1200.00, action: "Attempt cancellation screen to trigger promotional discount of 20-30%." }
   ],
   spendingPatterns: [
-    { pattern: "Micro-Transaction Leakage", detail: "Frequent dining orders under $40 are accumulating rapidly, draining cash without notice." },
-    { pattern: "Under-Optimized SaaS Stack", detail: "Subscriptions represent 9.4% of total expenditure. High relative to standard benchmarks." },
-    { pattern: "Strong Income-to-Rent Ratio", detail: "Income ($6,250) easily covers Rent ($1,500), leaving ample room for discretionary savings." }
+    { pattern: "Micro-Transaction Leakage", detail: "Frequent dining orders under ₹1,500 are accumulating rapidly, draining cash without notice." },
+    { pattern: "Under-Optimized SaaS Stack", detail: "Subscriptions represent 14.2% of total expenditure. High relative to standard benchmarks." },
+    { pattern: "Strong Income-to-Rent Ratio", detail: "Income (₹1,50,000) easily covers Rent (₹45,000), leaving ample room for discretionary savings." }
   ],
   duplicatePayments: [],
   unusualSpending: [
-    { date: "2026-06-26", description: "Amazon.com Purchase", amount: 145.80, explanation: "Anomalously high shopping purchase. 3.2x higher than typical transaction size for this cycle." }
+    { date: "2026-06-26", description: "Amazon.in Purchase", amount: 12000.00, explanation: "Anomalously high shopping purchase. 3.2x higher than typical transaction size for this cycle." }
   ],
   cashFlow: {
-    income: 6250.00,
-    expenses: 2438.16,
-    netSavings: 3811.84
+    income: 187500.00,
+    expenses: 102246.00,
+    netSavings: 85254.00
   }
 };

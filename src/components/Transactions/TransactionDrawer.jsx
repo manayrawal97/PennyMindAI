@@ -1,5 +1,5 @@
-import React from 'react';
-import { FiX, FiCheckCircle, FiInfo, FiTag, FiCalendar, FiDollarSign } from 'react-icons/fi';
+import { FiX, FiCheckCircle, FiInfo, FiTag, FiCalendar } from 'react-icons/fi';
+import { FaIndianRupeeSign } from 'react-icons/fa6';
 
 const CATEGORIES = [
   'Housing',
@@ -20,9 +20,9 @@ export default function TransactionDrawer({ transaction, onClose, onUpdateCatego
 
   // Format currency
   const formatCurrency = (val) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'INR'
     }).format(val);
   };
 
@@ -86,7 +86,7 @@ export default function TransactionDrawer({ transaction, onClose, onUpdateCatego
               </div>
               <div className="flex-1 rounded-xl bg-gray-50 dark:bg-gray-800/40 p-3.5 border border-gray-200/30 dark:border-gray-700/25">
                 <label className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider block flex items-center gap-1">
-                  <FiDollarSign /> Type
+                  <FaIndianRupeeSign className="h-3.5 w-3.5" /> Type
                 </label>
                 <span className={`mt-1 block font-semibold text-xs uppercase ${transaction.amount > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-600 dark:text-gray-400'}`}>
                   {transaction.amount > 0 ? 'Income' : 'Expense'}

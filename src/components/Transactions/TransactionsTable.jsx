@@ -72,9 +72,9 @@ export default function TransactionsTable({ transactions, onTransactionClick }) 
 
   // Format currency helper
   const formatCurrency = (val) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'INR'
     }).format(val);
   };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiDollarSign, FiCheck, FiPlusCircle, FiCheckCircle } from 'react-icons/fi';
+import { FiCheck, FiPlusCircle, FiCheckCircle } from 'react-icons/fi';
 
 export default function SavingsSuggestions({ recommendations }) {
   const [implementedList, setImplementedList] = useState([]);
@@ -13,9 +13,9 @@ export default function SavingsSuggestions({ recommendations }) {
   };
 
   const formatCurrency = (val) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'INR'
     }).format(val);
   };
 

@@ -1,13 +1,13 @@
-import React from 'react';
-import { FiTrendingUp, FiTrendingDown, FiDollarSign, FiHeart, FiPieChart, FiRepeat } from 'react-icons/fi';
+import { FiTrendingUp, FiTrendingDown, FiHeart, FiPieChart, FiRepeat } from 'react-icons/fi';
+import { FaIndianRupeeSign } from 'react-icons/fa6';
 
 export default function SummaryCards({ cashFlow, healthScore, categories, subscriptions }) {
   
   // Format currency helper
   const formatCurrency = (val) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'INR'
     }).format(val);
   };
 
@@ -97,7 +97,7 @@ export default function SummaryCards({ cashFlow, healthScore, categories, subscr
         <div className="flex items-center justify-between">
           <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">Net Savings</span>
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-950/30 dark:text-blue-400">
-            <FiDollarSign className="h-5 w-5" />
+            <FaIndianRupeeSign className="h-4.5 w-4.5" />
           </div>
         </div>
         <div className="mt-4">

@@ -71,7 +71,13 @@ export default function ChartsSection({ categories, transactions, subscriptions 
   }, [subscriptions]);
 
   const formatYAxis = (tick) => {
-    return `$${tick}`;
+    if (tick >= 100000) {
+      return `₹${(tick / 100000).toFixed(1)}L`;
+    }
+    if (tick >= 1000) {
+      return `₹${(tick / 1000).toFixed(0)}k`;
+    }
+    return `₹${tick}`;
   };
 
   return (
@@ -100,7 +106,7 @@ export default function ChartsSection({ categories, transactions, subscriptions 
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(value) => [`$${value}`, 'AmountSpent']} />
+                <Tooltip formatter={(value) => [`₹${new Intl.NumberFormat('en-IN').format(value)}`, 'Amount Spent']} />
                 <Legend layout="horizontal" verticalAlign="bottom" align="center" iconType="circle" wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
               </PieChart>
             </ResponsiveContainer>
@@ -134,7 +140,7 @@ export default function ChartsSection({ categories, transactions, subscriptions 
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={gridColor} />
                 <XAxis dataKey="date" stroke={textColor} fontSize={11} tickLine={false} />
                 <YAxis stroke={textColor} fontSize={11} tickLine={false} tickFormatter={formatYAxis} />
-                <Tooltip />
+                <Tooltip formatter={(value) => [`₹${new Intl.NumberFormat('en-IN').format(value)}`]} />
                 <Legend verticalAlign="top" height={36} iconType="circle" wrapperStyle={{ fontSize: '11px' }} />
                 <Area type="monotone" dataKey="Income" stroke="#10b981" strokeWidth={2} fillOpacity={1} fill="url(#colorIncome)" />
                 <Area type="monotone" dataKey="Expenses" stroke="#ef4444" strokeWidth={2} fillOpacity={1} fill="url(#colorExpenses)" />
@@ -160,7 +166,7 @@ export default function ChartsSection({ categories, transactions, subscriptions 
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={gridColor} />
                 <XAxis dataKey="name" stroke={textColor} fontSize={10} tickLine={false} />
                 <YAxis stroke={textColor} fontSize={11} tickLine={false} tickFormatter={formatYAxis} />
-                <Tooltip formatter={(value) => [`$${value}`, 'Spent']} />
+                <Tooltip formatter={(value) => [`₹${new Intl.NumberFormat('en-IN').format(value)}`, 'Spent']} />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                   {categoryChartData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
@@ -199,7 +205,7 @@ export default function ChartsSection({ categories, transactions, subscriptions 
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(value) => [`$${value}`, 'Monthly Cost']} />
+                <Tooltip formatter={(value) => [`₹${new Intl.NumberFormat('en-IN').format(value)}`, 'Monthly Cost']} />
                 <Legend layout="horizontal" verticalAlign="bottom" align="center" iconType="circle" wrapperStyle={{ fontSize: '10px', paddingTop: '10px' }} />
               </PieChart>
             </ResponsiveContainer>

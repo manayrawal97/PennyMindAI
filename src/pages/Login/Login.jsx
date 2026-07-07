@@ -143,7 +143,7 @@ export default function Login({ onLoginSuccess }) {
             <span className="text-[10px] text-sky-200 font-bold uppercase tracking-wider block">Auditor Mode</span>
             <span className="text-xl font-bold mt-1 block">Expense Leak Found</span>
             <div className="mt-4 flex items-center gap-3">
-              <div className="h-9 w-9 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold">+$185</div>
+              <div className="h-9 w-9 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-xs">+₹8.5k</div>
               <div>
                 <span className="text-xs font-bold block">Subscriptions Cap</span>
                 <span className="text-[10px] text-white/60 block">Action completed successfully</span>

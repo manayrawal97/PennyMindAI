@@ -292,7 +292,7 @@ export default function Landing({ theme, setTheme }) {
                 className="absolute -top-6 -right-6 bg-slate-900 text-white dark:bg-slate-950 rounded-2xl p-4 shadow-xl border border-slate-800"
               >
                 <span className="text-[10px] text-sky-400 font-bold uppercase tracking-wider block">Unusual Spending</span>
-                <span className="text-sm font-extrabold font-mono block mt-1">AWS Cloud: +$85.20</span>
+                <span className="text-sm font-extrabold font-mono block mt-1">AWS Cloud: +₹7,100</span>
                 <span className="text-[9px] text-slate-400 block mt-0.5">3.2x higher than typical</span>
               </motion.div>
 
@@ -498,15 +498,15 @@ export default function Landing({ theme, setTheme }) {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900">
                   <span className="text-[10px] font-bold text-slate-400 block">RECURRING INFLOW</span>
-                  <span className="text-xl font-bold font-mono block mt-1 text-emerald-500">+$6,250.00</span>
+                  <span className="text-xl font-bold font-mono block mt-1 text-emerald-500">+₹1,87,500.00</span>
                 </div>
                 <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900">
                   <span className="text-[10px] font-bold text-slate-400 block">TOTAL DEBITS</span>
-                  <span className="text-xl font-bold font-mono block mt-1 text-slate-900 dark:text-white">-$2,438.16</span>
+                  <span className="text-xl font-bold font-mono block mt-1 text-slate-900 dark:text-white">-₹1,02,246.00</span>
                 </div>
                 <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900">
                   <span className="text-[10px] font-bold text-slate-400 block">NET SAVINGS</span>
-                  <span className="text-xl font-bold font-mono block mt-1 text-sky-500">+$3,811.84</span>
+                  <span className="text-xl font-bold font-mono block mt-1 text-sky-500">+₹85,254.00</span>
                 </div>
               </div>
 
@@ -517,15 +517,15 @@ export default function Landing({ theme, setTheme }) {
                 <div className="divide-y divide-slate-100 dark:divide-slate-850 text-xs px-4">
                   <div className="py-3 flex justify-between">
                     <span className="font-semibold">Swiggy Restaurant</span>
-                    <span className="font-mono text-slate-400">-$15.50</span>
+                    <span className="font-mono text-slate-400">-₹950.00</span>
                   </div>
                   <div className="py-3 flex justify-between">
                     <span className="font-semibold">Netflix Subscription</span>
-                    <span className="font-mono text-pink-500">-$14.99</span>
+                    <span className="font-mono text-pink-500">-₹649.00</span>
                   </div>
                   <div className="py-3 flex justify-between">
-                    <span className="font-semibold">Whole Foods Market</span>
-                    <span className="font-mono text-slate-400">-$120.50</span>
+                    <span className="font-semibold">Reliance Smart</span>
+                    <span className="font-mono text-slate-400">-₹9,800.00</span>
                   </div>
                 </div>
               </div>

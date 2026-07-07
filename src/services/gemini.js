@@ -22,26 +22,26 @@ export const analyzeTransactionsWithGemini = async (transactions, apiKey) => {
     amount: t.amount,
   }));
 
-  const systemInstructions = `You are a world-class financial advisor, forensic accountant, and personal finance analyst.
-Analyze the provided transaction list.
+  const systemInstructions = `You are a world-class financial advisor, forensic accountant, and personal finance analyst specializing in Indian personal finance.
+Analyze the provided transaction list. All transactions and values are in Indian Rupees (INR, ₹).
 Return JSON only.
 Categorize every transaction.
 Identify subscriptions.
 Detect duplicate payments (same amount, same description, close date).
 Identify unnecessary or excessive expenses.
-Detect spending patterns (dining out, shopping habits, weekend spend vs weekday spend).
+Detect spending patterns (dining out on Swiggy/Zomato, shopping habits, weekend spend vs weekday spend).
 Generate financial insights.
-Provide actionable savings recommendations with priority, estimated savings, and action steps.
+Provide actionable savings recommendations with priority, estimated savings in INR (₹), and action steps.
 Generate a financial health score from 0-100 based on savings rate, subscription density, and budget discipline.
 Return CLEAN JSON structure matching the EXACT type schema defined below. Do not wrap in markdown tags like \`\`\`json. Return raw JSON text.`;
 
   const jsonSchema = `{
   "healthScore": 85,
-  "summary": "Short paragraph summarizing spending behavior, main leakages, and savings opportunities.",
+  "summary": "Short paragraph summarizing spending behavior in Indian Rupees, main leakages, and savings opportunities. E.g., 'You spent ₹8,200 on food delivery this month.'",
   "categories": [
     {
       "name": "Category Name (e.g. Housing, Dining & Drinks, Groceries, Subscriptions & SaaS, Shopping, Transportation, Utilities, Entertainment, Fitness, Others)",
-      "amount": 150.00,
+      "amount": 15000.00,
       "percentage": 15.0,
       "color": "Hex color code matching the category mood (e.g. #6366f1, #ec4899, #8b5cf6, #10b981, #3b82f6, #f59e0b, #14b8a6, #ef4444, #a855f7)",
       "count": 3
@@ -50,10 +50,10 @@ Return CLEAN JSON structure matching the EXACT type schema defined below. Do not
   "subscriptions": [
     {
       "name": "Netflix Subscription",
-      "amount": 14.99,
+      "amount": 649.00,
       "frequency": "Monthly",
       "type": "Entertainment",
-      "description": "Short explanation of service and cost reduction tip."
+      "description": "Short explanation of service and cost reduction tip in INR."
     }
   ],
   "recommendations": [
@@ -61,35 +61,35 @@ Return CLEAN JSON structure matching the EXACT type schema defined below. Do not
       "category": "Subscriptions",
       "priority": "High | Medium | Low",
       "title": "Cancel Netflix",
-      "amount": 14.99,
-      "action": "Description of suggested action."
+      "amount": 649.00,
+      "action": "Description of suggested action in INR."
     }
   ],
   "spendingPatterns": [
     {
       "pattern": "Weekend dining spike",
-      "detail": "Detailed explanation of the trend."
+      "detail": "Detailed explanation of the trend in INR."
     }
   ],
   "duplicatePayments": [
     {
       "description": "Double Swiggy Charge",
       "date": "2026-06-02",
-      "amount": 15.50
+      "amount": 450.00
     }
   ],
   "unusualSpending": [
     {
       "date": "2026-06-26",
       "description": "Amazon Purchase",
-      "amount": 145.80,
+      "amount": 12500.00,
       "explanation": "Why this is flagged (e.g. 300% higher than average transaction)."
     }
   ],
   "cashFlow": {
-    "income": 5000.00,
-    "expenses": 1200.00,
-    "netSavings": 3800.00
+    "income": 150000.00,
+    "expenses": 65000.00,
+    "netSavings": 85000.00
   }
 }`;
 

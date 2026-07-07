@@ -112,7 +112,7 @@ export default function Home({ apiKey }) {
       const newAnalysis = {
         id: `analysis-${Date.now()}`,
         fileName,
-        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        date: new Date().toLocaleDateString('en-IN', { month: 'short', day: 'numeric', year: 'numeric' }),
         transactionsCount: transactions.length,
         transactions,
         analysisResult: finalResult
@@ -457,7 +457,7 @@ export default function Home({ apiKey }) {
           {/* PRINT-ONLY HEADER */}
           <div className="hidden print:block text-center border-b pb-4 mb-6">
             <h1 className="text-2xl font-bold text-black">PennyMind AI Statement Audit Report</h1>
-            <p className="text-xs text-gray-600 mt-1">Source File: {fileName} | Generated on {new Date().toLocaleDateString()}</p>
+            <p className="text-xs text-gray-600 mt-1">Source File: {fileName} | Generated on {new Date().toLocaleDateString('en-IN')}</p>
           </div>
 
           {/* 1. Summary Cards Panel */}
